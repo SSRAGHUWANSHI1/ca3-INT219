@@ -1,0 +1,108 @@
+body{
+    text-align: center;
+    background-color: azure;
+}
+.array{
+    display: inline-block;
+}
+input{
+    width: 40%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="text"]
+{
+    font-size:24px;
+}
+button{
+    background-color: #89917f; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.btn:hover{
+    background-image: -webkit-linear-gradient(top, #10080f, #3c1313);
+    background-image: -moz-linear-gradient(top, #0a090a, #441515);
+    background-image: -ms-linear-gradient(top, #0c0a0c, #501717);
+    background-image: -o-linear-gradient(top, #171617, #481b1b);
+    background-image: linear-gradient(to bottom, #171416, #521f1f);
+    text-decoration: none;
+    background: #161316;
+}
+#explanationDiv{
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;
+    background-color:#d5f4fb;
+    margin-top: 20px;  
+    display: block;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+@media (max-width:750px){
+    body{
+        /* text-align:start; */
+        
+    }
+    h1{
+        font-size: 25px;
+    }
+    input{
+        padding: 8px 15px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin: 5px;
+    }
+    input[type="text"]
+    {
+        font-size:15px;
+    }
+    button{
+      padding: 10px 25px;
+      font-size: 10px;
+      border-radius: 7px;
+    }
+
+}
+@media ( max-width:1200px){
+    body{
+        /* text-align:start; */
+        
+    }
+    h1{
+        font-size: 30px;
+    }
+    input{
+        padding: 10px 18px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 7px;
+    }
+    input[type="text"]
+    {
+        font-size:18px;
+    }
+    button{
+      padding: 13px 28px;
+      font-size: 13px;
+      border-radius: 9px;
+    }
+
+}
+
+.hidden{
+    display: none !important;
+}

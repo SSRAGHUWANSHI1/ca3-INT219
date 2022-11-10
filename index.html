@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <form name="myform" method="post" onsubmit="return validateform()" action="/index.html"> -->
+    <h1>Enter the number of elements:</h1><input type="text" name="" id="noofels">
+    <h1>Enter the elements: </h1><p>(followed by comma(,))</p><input type="text" id="els">
+    <br> <br>
+
+    <button class="btn" id="submit">submit</button>
+<!-- </form> -->
+    <h1 id="answer"></h1>
+    <button class="btn" id="explanation">explanation</button>
+    <div id="explanationDiv" class="hidden">
+        <p class="array">The array is: </p>
+        <p id="explanationP" class="array"></p>
+        <br>
+        <p class="array">Subsets are:</p>
+        <p id="subsetDiv" class="array"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -6,36 +6,16 @@ subBtn.addEventListener('click', () => {
     if(checkInput()==true){
         const sz = document.getElementById('noofels')
     const els = document.getElementById('els')
-    let arr = els.value.split(',').map(strDigit => { return parseInt(strDigit) })
+    const len=Number.parseInt(document.getElementById('noofels').value)
+    // let arr = els.value.split(',').map(strDigit => { return parseInt(strDigit) })
+    let arr = els.value.split(',').map(strDigit => { return parseInt(strDigit) }).slice(0,len)
     let size = parseInt(sz.value);
     document.getElementById("explanationP").innerHTML=arr;
     document.getElementById("answer").innerHTML="The minimum number of subset with distinct elements is: "+ subset(arr, arr.length);
     }
-    
-    // const sz = document.getElementById('noofels')
-    // const els = document.getElementById('els')
-    // let arr = els.value.split(',').map(strDigit => { return parseInt(strDigit) })
-    // let size = parseInt(sz.value);
-    // document.getElementById("explanationP").innerHTML=arr;
-    // document.getElementById("answer").innerHTML="The minimum number of subset with distinct elements is: "+ subset(arr, arr.length);
-
 })
-// expBtn.addEventListener('click',()=>{
-//     myFunction()
-//     let arr = els.value.split(' ').map(strDigit => { return parseInt(strDigit) })
-//     let r = ''
-//     for (let v of subsetFind(arr)) {
-//         r+='{'
-//         for (let x of v) {
-//             r += ' ' +x + ' '
-//         }
-//         r+='}'
-//     }
-//     document.getElementById("subsetDiv").innerHTML=r;
-//     document.getElementById("explanationP").innerHTML=arr;
-
-// });
 expBtn.addEventListener('click',async ()=>{
+  if(checkInput()==true){
     myFunction()
     document.getElementById("explanation").disabled=true;
     
@@ -46,6 +26,7 @@ expBtn.addEventListener('click',async ()=>{
     let r = ''
     document.getElementById("explanationP").innerHTML=arr;
 
+    //subset printing
     for (let v of subsetFind(arr)) {
         r='{'
         await new Promise((res,rej)=>{
@@ -70,7 +51,7 @@ expBtn.addEventListener('click',async ()=>{
         })
     }
     document.getElementById("explanation").disabled=false;
-
+  }
 });
         
 function subset(arr, n) {
@@ -113,16 +94,6 @@ function subset(arr, n) {
     //     }
     //     return res;
     // }
- 
-        // var arr = [];
-        // var size = prompt("Enter no of elements: ");
-        // for(var i=0; i<size; i++) {
-	    //     arr[i] = prompt('Enter Element ' + (i+1));
-        //     document.getElementById("explanationP").innerHTML=arr;
-        // }
-        // var n = arr.length;
-        
-        // div hide
         function myFunction() {
             const x = document.getElementById("explanationDiv");
             x.classList.toggle("hidden")
@@ -162,7 +133,6 @@ function subset(arr, n) {
       }
       // Driver code
       function main() {
-          let arr = [5, 6, 9, 3, 4, 3, 4];
           for (let v of subsetFind(arr)) {
               let r = ''
               for (let x of v) {
@@ -174,30 +144,15 @@ function subset(arr, n) {
           return 0;
       }
 
-    //   function validateform(){  
-    //     var noOfels=document.getElementById('noofels').value;  
-    //     var elements=document.getElementById('els').value;  
-          
-    //     if (noOfels==null || noOfels==""){  
-    //       alert("Name can't be blank");  
-    //       return false;  
-    //     }else if(elements==null || elements==""){  
-    //       alert("Password must be at least 6 characters long.");  
-    //       return false;  
-    //       }  
-    //     }  
-
+      //validation code
     function checkInput() {
         let input1 = document.getElementById("noofels").value;
         let input2 = document.getElementById("els").value;
-        // let input3 = document.getElementById("value").value;
-      
-        // if(isNaN(input3)){
-        //   document.getElementById("value").style.border = "2px solid red";
-        // }
-        // else{
-        //   document.getElementById("value").style.removeProperty('border');
-        // }
+
+        if(input1 == "" || input2 == ""){
+          alert("inputs cannot be empty")
+          return false
+        }
       
         // https://www.w3schools.com/jsref/jsref_obj_regexp.asp
       
@@ -224,19 +179,19 @@ function subset(arr, n) {
           document.getElementById("noofels").style.border = "2px solid red";
           document.getElementById("els").style.border = "2px solid red";
           setTimeout(function () {
-            // alert("input1 and input2 wrong");
+            alert("wrong input");
           }, 500);
           return false;
         } else if (!result_1) {
           document.getElementById("noofels").style.border = "2px solid red";
           setTimeout(function () {
-            // alert("input1 wrong");
+            alert("wrong input");
           }, 500);
           return false;
         } else if (!result_2) {
           document.getElementById("noofels").style.border = "2px solid red";
           setTimeout(function () {
-            // alert("input2 wrong");
+            alert("wrong input");
           }, 500);
           return false;
         }

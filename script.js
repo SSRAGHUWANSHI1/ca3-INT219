@@ -94,25 +94,25 @@ function subset(arr, n) {
     //     }
     //     return res;
     // }
-        function myFunction() {
-            const x = document.getElementById("explanationDiv");
-            x.classList.toggle("hidden")
-        }
+      function myFunction() {
+          const x = document.getElementById("explanationDiv");
+          x.classList.toggle("hidden")
+      }
 
 
-        function subsetFind(arr) {
-          // Traverse the input array and
-          // store frequencies of elements
-          let mp = new Map();
-          let ttl = -1;
-      
-          arr.forEach(element => {
-              if (!mp[element])
-                  mp[element] = 1;
-              else
-                  mp[element]++;
-              if (mp[element] > ttl)
-                  ttl = mp[element];
+      function subsetFind(arr) {
+        // store frequencies of elements
+        let mp = new Map();
+        let ttl = -1;
+        
+        // Traverse the input array and
+        arr.forEach(element => {
+          if (!mp[element])
+            mp[element] = 1;
+          else
+            mp[element]++;
+            if (mp[element] > ttl)
+              ttl = mp[element];
           });
       
       
@@ -189,7 +189,7 @@ function subset(arr, n) {
           }, 500);
           return false;
         } else if (!result_2) {
-          document.getElementById("noofels").style.border = "2px solid red";
+          document.getElementById("els").style.border = "2px solid red";
           setTimeout(function () {
             alert("wrong input");
           }, 500);

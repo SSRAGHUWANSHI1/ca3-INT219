@@ -65,7 +65,7 @@ button{
 }
 
 /* responsiveness */
-@media (max-width:750px){
+@media (min-width:10px) and (max-width:750px){
     body{
         /* text-align:start; */
         
@@ -94,7 +94,7 @@ button{
     }
 
 }
-/* @media (min-width:751px)&&( max-width:1200px){
+@media (min-width:751px) and ( max-width:1200px){
     body{
     
         
@@ -119,10 +119,10 @@ button{
       border-radius: 9px;
     }
     .card{
-        height: 40px;
+        height: 60px;
     }
 
-} */
+}
 
 .hidden{
     display: none !important;
